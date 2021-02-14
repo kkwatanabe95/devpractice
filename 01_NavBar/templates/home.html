@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+
+{% block style %}
+.navbar a.home:link, a.home:visited {
+	background-color: grey;
+}
+body {
+	background-color: black;
+	color: white;
+}
+
+
+{% endblock %}
+
+{% block body %}
+<div>
+	<h1 style="margin: 100px 50px;">
+		Welcome!<br>This local website is where I practice all my CSS, HTML, and JavaScript.
+	</h1>
+</div>
+{% endblock %}
