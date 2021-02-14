@@ -11,6 +11,31 @@ body {background-color: white; margin: 0px; font-family: impact, serif;}
 
 
 /* Flexbox */
+.imageContainer {
+	display: flex;
+	background-color: white;
+	position: relative;
+	left: 50px;
+	width: 60%;
+	height: auto;
+
+}
+.rightContainer {
+	display: flex;
+	background-color: yellow;
+	flex-flow: column wrap;
+	padding: 10px;
+}
+.leftContainer {
+	display: flex;
+	background-color: black;
+	flex-flow: column wrap;
+	padding: 10px;
+}
+
+
+
+
 
 
 /* Links Styling */
