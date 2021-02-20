@@ -5,21 +5,17 @@
 
 {% block style %}
 	.navbar a.flexbox:link, a.flexbox:visited {background-color: grey}
-	body {background-color: olive;}
+	.navbar {margin-bottom: 0px}
 
 {% endblock %}
 
 
 {% block body %}
-
-	<div class="imageContainer">
-		<div class="rightContainer">
-			<img src="/static/img/Mushroom.jpg" alt="Mushroom" width="300" height="200" style="padding: 10px">
-			<img src="/static/img/Sun.jpg" width="300" height="200" style="padding: 10px">
-		</div>
-		<div class="leftContainer">
-			<img src="/static/img/Susuki.jpg" width="300" height="200" style="padding: 10px">
-			<img src="/static/img/Sand.jpg" width="300" height="200" style="padding: 10px">
+	<div class="image">
+		<div class="container" style="position: sticky">
+			<a href="/home"><div class="item">left</div></a>
+			<a href="/home"><div class="item">center</div></a>
+			<a href="/home"><div class="item">right</div></a>
 		</div>
 	</div>
 {% endblock %}
