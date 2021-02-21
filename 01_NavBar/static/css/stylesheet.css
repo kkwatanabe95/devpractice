@@ -1,5 +1,6 @@
 /* CSS StyleSheet */
-html, body {height: 100%; background-color: white; margin: 0px; font-family: impact, serif;}
+html, body {height: 100%; margin: 0px; font-family: georgia, serif;}
+.maintext {margin: 100px 50px; color: white; font-size: 2em;}
 
 /*	Different Styleshees for different media
 <link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
@@ -11,18 +12,15 @@ html, body {height: 100%; background-color: white; margin: 0px; font-family: imp
 
 /* Toggle Links Styling */
 :root {
+--forest-main: rgba(100, 160, 15, 1);
+--forest-sub: rgba(30, 160, 75, 1);
+--forest-accent: rgba(250, 120, 30, 1);
+--forest-font: rgba(255, 240, 210, 1);
+--sunset-main: rgba(250, 120, 35, 1);
+--sunset-sub: rgba(240, 200, 50, 1);
+--sunset-accent: rgba(255, 240, 220, 1);
+--sunset-font: rgba(50, 10, 30, 1);
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -51,6 +49,7 @@ html, body {height: 100%; background-color: white; margin: 0px; font-family: imp
 	justify-content: space-between;
 	padding: 20px;
 }
+
 .image .container .item {
 	color: white;
 	font-size: 1.2em;
@@ -71,7 +70,7 @@ a {text-decoration: none;}
 
 /* Navbar Links Styling */
 .navbar {
-	background-color: darkgrey;
+	background-color: rgba(120, 120, 120, 0.6);
 	overflow: hidden;
 	width: 100%;
 	height: 42px;
@@ -87,24 +86,17 @@ a {
 	padding: 10px 20px;
 }
 
-a:visited {
-	background-color: red;
-}
-
 a:hover, a:active {
-	background-color: lightgrey;
+	background-color: rgba(150, 150, 150, 0.5);
 }
 
-.navbartoggle {
-	background-color: green;
-	overflow: hidden;
-	width: 100%;
-	height: 42px;
-	font-size: 1.3em;
-	margin-bottom: 20px;
-	position: sticky;
+
+.forestTheme {
+	background-color: var(--forest-main);
+	color: var(--forest-font);
 }
 
-.navbartoggle a:hover, .navber a:active {
-	background-color: olive;
+.sunsetTheme {
+	background-color: var(--sunset-main);
+	color: var(--sunset-font);
 }

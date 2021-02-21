@@ -3,12 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 	<title>{% block title %}{% endblock %}</title>
 	{% block head %}{% endblock %}
 	<link id="pagestyle" rel="stylesheet" type="text/css" href="/static/css/stylesheet.css">
-	<script type="text/javascript" src="{{ url_for('static',filename='js/javasheet.js') }}"></script>
-
-
 	<style>{% block style %}{% endblock %}</style>
 </head>
 <body>
@@ -18,8 +16,7 @@
 		<a class="toggle" href="/toggle">Toggle</a>
 		<a class="#3" href="#3">Link 3</a>
 	</div>
-	<button onclick="toggleForest()">Forest</button>
-	<button onclick="defaultstyle()">Default</button>
+	
 
 	{% block body %}{% endblock %}
 
