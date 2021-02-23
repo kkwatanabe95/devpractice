@@ -9,14 +9,18 @@ const enableDefaultTheme = () => {
 
 	theme = localStorage.setItem('theme', 'default')
 };
+
 const enableForestTheme = () => {
 	document.body.classList.remove('sunsetTheme');
 	document.body.classList.add('forestTheme');
+
 	theme = localStorage.setItem('theme', 'forest')
 };
+
 const enableSunsetTheme = () => {
 	document.body.classList.remove('forestTheme');
 	document.body.classList.add('sunsetTheme');
+
 	theme = localStorage.setItem('theme', 'sunset')
 };
 

@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}Grid{% endblock %}
+
+
+{% block style %}
+.navbar a.grid:link, a.grid:visited {
+	background-color: grey;
+}
+body {
+	background-color: black;
+	color: white;
+}
+
+
+{% endblock %}
+
+{% block body %}
+	<h1 class="maintext">
+		Making grids and stuff up in here.
+	</h1>
+
+	<div class="gridcontainer">
+		<a href="/" class="griditem griditem1">
+			<img class="imagestyle" src="/static/img/billyhead.jpg" alt="BillyBoy">
+			<div class="imageoverlay">
+				<p class="griditem-text text1">BillyBoy!</p>
+			</div>
+		</a>		
+
+		<a href="/" class="griditem griditem2">
+			<img class="imagestyle" src="/static/img/max.jpg" alt="Max">
+			<div class="imageoverlay">
+				<p class="griditem-text text2">Max!</p>
+			</div>
+		</a>		
+
+		<a href="/" class="griditem griditem3">
+			<img class="imagestyle" src="/static/img/treesun.jpg" alt="treesun">
+			<div class="imageoverlay">
+				<p class="griditem-text text1">Sun!</p>
+			</div>
+		</a>		
+
+		<a href="/" class="griditem griditem4">
+			<img class="imagestyle" src="/static/img/miyaface.jpg" alt="miyaface">
+			<div class="imageoverlay">
+				<p class="griditem-text text1">Miya!</p>
+			</div>
+		</a>		
+
+		<a href="/" class="griditem griditem5">
+			<img class="imagestyle" src="/static/img/treesky.jpg" alt="treesky">
+			<div class="imageoverlay">
+				<p class="griditem-text text5">Sky!</p>
+			</div>
+		</a>		
+
+		<a href="/" class="griditem griditem6">
+			<img class="imagestyle" src="/static/img/lattemi.jpg" alt="lattemi">
+			<div class="imageoverlay">
+				<p class="griditem-text text1">Latte & Mi!</p>
+			</div>
+		</a>
+	</div>
+
+
+
+{% endblock %}
