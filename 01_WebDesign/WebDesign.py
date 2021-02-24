@@ -21,6 +21,9 @@ def toggle():
 def grid():
 	return render_template("grid.html")
 
+@app.route("/hover/")
+def hover():
+	return render_template("hover.html")
 
 if __name__ == "__main__":
 	    app.run(debug=True)
