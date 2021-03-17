@@ -8,6 +8,61 @@ html, body {height: 100%; margin: 0px; font-family: georgia, serif;}
 */
 
 
+/* DRY Toggle Styling */
+
+html {
+	--ON: initial;
+	--OFF: ;
+}
+
+
+
+.defaultTheme {
+	--default: var(--ON);
+	--blue: var(--OFF);
+	--green: var(--OFF);
+}
+.blueTheme {
+	--default: var(--OFF);
+	--blue: var(--ON);
+	--green: var(--OFF);
+}
+.greenTheme {
+	--default: var(--OFF);
+	--blue: var(--OFF);
+	--green: var(--ON);
+}
+
+
+
+html {
+	--bgDry:
+		var(--default, grey)
+		var(--blue, skyblue)
+		var(--green, olive);
+	--textDry: var(--default, white (var(--blue, gold (var(--green, black)))));
+}
+
+
+
+.dryToggleTest {
+	display: flex ;
+	width: 80vw;
+	margin: 0 10vw;
+	height: 300px;
+	background-color: var(--bgDry);
+	color: var(--textDry);
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+
+
+
+
+
 /* Different hover styles */
 
 .hoverGrid {
@@ -205,14 +260,11 @@ a.griditem:link, a.griditem:visited {
 
 
 /* Toggle Links Styling */
+
 :root {
 --forest-main: rgba(100, 160, 15, 1);
---forest-sub: rgba(30, 160, 75, 1);
---forest-accent: rgba(250, 120, 30, 1);
 --forest-font: rgba(255, 240, 210, 1);
 --sunset-main: rgba(250, 120, 35, 1);
---sunset-sub: rgba(240, 200, 50, 1);
---sunset-accent: rgba(255, 240, 220, 1);
 --sunset-font: rgba(50, 10, 30, 1);
 }
 
@@ -255,10 +307,11 @@ a {text-decoration: none;}
 
 /* Navbar Links Styling */
 .navbar {
+	box-sizing: border-box;
 	background-color: rgba(120, 120, 120, 0.6);
 	overflow: hidden;
 	width: 100%;
-	height: 4%;
+	height: 40px;
 	font-size: 1.3em;
 	margin-bottom: 20px;
 	position: relative;
@@ -280,7 +333,6 @@ a {text-decoration: none;}
 
 /* Toggle Theme Classes */
 .forestTheme {
-
 	background-color: var(--forest-main);
 	color: var(--forest-font);
 }

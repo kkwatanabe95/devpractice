@@ -1,0 +1,84 @@
+/* StyleSheet */
+html, body {
+	background: black;
+	color: white;
+	margin: 0;
+	padding: 0;
+}
+header {
+	width: 100%;
+	height: 100vh;
+	box-sizing: border-box;
+}
+footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 15vh;
+	background: orange;
+}
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+
+
+
+/* Grid for Images. The different display layout options are all done from Javascript */
+
+.imgGridContainer {
+	display: grid;
+	box-sizing: border-box;
+	grid-gap: 2vw;
+	height: auto;
+	padding: 5vw;
+	background: black;
+	position: relative;
+}
+
+.imgGridItem {
+	width: 100%;
+	height: auto;
+	box-sizing: border-box;
+}
+
+
+/* Buttons to toggle betweent the different display options.
+And also to make the toggle buttons sticky once reaching the photos */
+
+.stickyButtonBox {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+	position: absolute;
+	top: 50px;
+	right: 50px;
+
+	background: orange;
+}
+
+.sticky {
+	position: fixed;
+	top: 50px;
+	right: 50px;
+	transition: 1s;
+
+}
+
+
+
+
+
+.logoText {
+	font: 3rem Impact;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+

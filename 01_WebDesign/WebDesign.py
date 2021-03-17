@@ -25,5 +25,9 @@ def grid():
 def hover():
 	return render_template("hover.html")
 
+@app.route("/drytoggle")
+def drytoggle():
+	return render_template("drytoggle.html")
+
 if __name__ == "__main__":
 	    app.run(debug=True)
