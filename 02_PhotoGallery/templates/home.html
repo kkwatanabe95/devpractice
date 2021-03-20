@@ -1,53 +1,57 @@
 {% extends "base.html" %}
 
-{% block title %}Photo Gallery{% endblock %}
-
+{% block title %}Furusato Design{% endblock %}
 
 {% block style %}
+
+a#home {
+	background: rgba(25, 50, 25, 0.8);
+}
 
 {% endblock %}
 
 {% block body %}
 
-	<header>
-		<img src="/static/img/treesky.jpg" alt="tree sun snow hill sky bark ice">
+	<div class="homeHeader">
+		<img src="/static/img/treesky.jpg" alt="">
 		<section class="logoText">
 			<h1>FURUSATO DESIGN</h1>
 		</section>
-	
-	</header>
-
-
-	<div id="imgGridContainer" class="imgGridContainer gridLayout2">
-		<div id="stickyButtonBox" class="stickyButtonBox">
-			<button id="grid1" class="gridButton">ONE</button>		
-			<button id="grid2" class="gridButton">TWO</button>
-			<button id="grid3" class="gridButton">THREE</button>
-
-			<button id="searchAll" class="gridButton" style="background: green; color: white;">ALL</button>
-			<button id="searchTree" class="gridButton" style="background: green; color: white;">TREE</button>
-			<button id="searchSnow" class="gridButton" style="background: green; color: white;">SNOW</button>
-			<button id="searchSun" class="gridButton" style="background: green; color: white;">SUN</button>
-		</div>
-		<img src="/static/img/snowhill2.jpg" alt="name snow hill sun" class="imgGridItem">		
-		<img src="/static/img/river.jpg" alt="name snow river sun" class="imgGridItem">		
-		<img src="/static/img/treesky2.jpg" alt="name tree sky" class="imgGridItem">		
-		<img src="/static/img/treebark1.jpg" alt="name tree bark" class="imgGridItem">		
-		<img src="/static/img/treesky3.jpg" alt="name ree sky" class="imgGridItem">		
-		<img src="/static/img/snowhill.jpg" alt="name snow hill" class="imgGridItem">		
-		<img src="/static/img/hillsun.jpg" alt="name hill sun" class="imgGridItem">		
-		<img src="/static/img/ice.jpg" alt="name ice sun" class="imgGridItem">		
-		<img src="/static/img/treebark2.jpg" alt="name tree bark" class="imgGridItem">		
-		<img src="/static/img/ice2.jpg" alt="name ice" class="imgGridItem">		
-		<img src="/static/img/treebark3.jpg" alt="name tree bark" class="imgGridItem">		
-		<img src="/static/img/treesnow.jpg" alt="name tree snow" class="imgGridItem">
-
 	</div>
 
-	<footer>
-		<h1>Furusato Design</h1>
-		<h3>furusato.design@gmailcom</h3>
-	</footer>
+	<section class="homeSection" style="margin-top: 100px;">
+		<div class="homeText">
+			Photography
+		</div>
+		<div class="homeGridContainer">
+			<div class="homeGridItem"></div>
+			<div class="homeGridItem"></div>
+			<div class="homeGridItem"></div>
+		</div>
+	</section>
+
+	<section class="homeSection">
+		<div class="homeText">
+			Interior
+		</div>
+		<div class="homeGridContainer">
+			<div class="homeGridItem"></div>
+			<div class="homeGridItem"></div>
+			<div class="homeGridItem"></div>
+		</div>
+	</section>
+
+	<section class="homeSection">
+		<div class="homeText">
+			Fashion
+		</div>
+		<div class="homeGridContainer">
+			<div class="homeGridItem"></div>
+			<div class="homeGridItem"></div>
+			<div class="homeGridItem"></div>
+		</div>
+	</section>
+
 
 
 

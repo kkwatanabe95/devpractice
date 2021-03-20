@@ -4,10 +4,6 @@ html, body {
 	color: white;
 	margin: 0;
 	padding: 0;
-}
-header {
-	width: 100%;
-	height: 100vh;
 	box-sizing: border-box;
 }
 footer {
@@ -17,7 +13,7 @@ footer {
 	align-items: center;
 	width: 100%;
 	height: 15vh;
-	background: orange;
+	background: rgba(50, 100, 50, 0.8);
 }
 img {
 	width: 100%;
@@ -28,6 +24,82 @@ img {
 
 
 
+
+/* ### HOME PAGE ### */
+/* Navbar styling */
+
+
+.homeHeader {
+	width: 100%;
+	height: 100vh;
+	box-sizing: border-box;
+}
+
+.navbarGridContainer {
+	display: grid;
+	grid-template-columns: 150px 1fr 1fr 1fr 1fr 1fr 1fr 150px;
+
+	width: 100%;
+	position: absolute;
+	top: 0;
+	background: rgba(50, 100, 50, 0.7);
+
+}
+
+.navbarGridContainer > a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+
+	text-decoration: none;
+	font: 1.5rem Times;
+	color: white;
+	padding: 10px 20px;
+
+	height: 5vh;
+}
+
+.navbarGridContainer a:hover {
+	background: rgba(25, 50, 25, 0.5);
+	font-size: 1.8rem;
+	transition: 0.3s;
+}
+
+
+/* Explation of the different sections of the page, and links to them.*/
+
+.homeSection {
+	width: 100%;
+	background: red;
+	box-sizing: border-box;
+	padding-top: 50px;
+}
+
+.homeText {
+	text-align: center;
+	font: 2em Georgia;
+	padding: 5px;
+}
+
+.homeGridContainer {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 3px;
+
+	margin: 0px 200px;
+	background: black;
+}
+
+.homeGridItem {
+	background: orange;
+	height: 500px;
+}
+
+
+
+
+/* PHOTOGRAPHY PAGE */
 /* Grid for Images. The different display layout options are all done from Javascript */
 
 .imgGridContainer {
@@ -35,9 +107,10 @@ img {
 	box-sizing: border-box;
 	grid-gap: 2vw;
 	height: auto;
-	padding: 5vw;
-	background: black;
+	padding: 2vw;
+	background: rgb(20 20 20);
 	position: relative;
+	grid-template-columns: repeat(3, 1fr)
 }
 
 .imgGridItem {
@@ -47,7 +120,7 @@ img {
 }
 
 
-/* Buttons to toggle betweent the different display options.
+/* Buttons to toggle between the different display options.
 And also to make the toggle buttons sticky once reaching the photos */
 
 .stickyButtonBox {
@@ -70,10 +143,6 @@ And also to make the toggle buttons sticky once reaching the photos */
 
 }
 
-
-
-
-
 .logoText {
 	font: 3rem Impact;
 	position: absolute;
@@ -81,4 +150,40 @@ And also to make the toggle buttons sticky once reaching the photos */
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+
+
+
+/* Showing selected photo full screen with caption */
+
+.modalView {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+}
+
+.modalBackground {
+	width: 100%;
+	height: 100%;
+	background: rgba(50, 50, 50, 0.9);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.modalImg {
+	width: auto;
+	height: 90%;
+}
+
+.closeModal {
+	position: absolute;
+	top: 50px;
+	right: 50px;
+}
+
 

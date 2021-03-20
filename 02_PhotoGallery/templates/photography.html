@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Photo Gallery{% endblock %}
+
+{% block style %}
+
+.navbarGridContainer {
+	position: relative;
+}
+a#photography {
+	background: rgba(25, 50, 25, 0.8);
+}
+
+{% endblock %}
+
+{% block body %}
+	
+
+	<div id="imgGridContainer" class="imgGridContainer gridLayout2">
+		<section id="stickyButtonBox" class="stickyButtonBox">	
+			<button id="grid2" class="gridColumnsButton">TWO</button>
+			<button id="grid3" class="gridColumnsButton">THREE</button>
+			<button id="grid4" class="gridColumnsButton">FOUR</button>
+			<button id="grid5" class="gridColumnsButton">FIVE</button>
+			<button id="grid6" class="gridColumnsButton">SIX</button>
+			<button id="grid10" class="gridColumnsButton">Thumbnail</button>
+
+
+			<button id="searchAll" class="gridButton" style="background: green; color: white;">ALL</button>
+			<button id="searchTree" class="gridButton" style="background: green; color: white;">TREE</button>
+			<button id="searchSnow" class="gridButton" style="background: green; color: white;">SNOW</button>
+			<button id="searchSun" class="gridButton" style="background: green; color: white;">SUN</button>
+		</section>
+		<img src="/static/img/snowhill2.jpg" alt="name snow hill sun" class="imgGridItem">		
+		<img src="/static/img/river.jpg" alt="name snow river sun" class="imgGridItem">		
+		<img src="/static/img/treesky2.jpg" alt="name tree sky" class="imgGridItem">		
+		<img src="/static/img/treebark1.jpg" alt="name tree bark" class="imgGridItem">		
+		<img src="/static/img/treesky3.jpg" alt="name ree sky" class="imgGridItem">		
+		<img src="/static/img/snowhill.jpg" alt="name snow hill" class="imgGridItem">		
+		<img src="/static/img/hillsun.jpg" alt="name hill sun" class="imgGridItem">		
+		<img src="/static/img/ice.jpg" alt="name ice sun" class="imgGridItem">		
+		<img src="/static/img/treebark2.jpg" alt="name tree bark" class="imgGridItem">		
+		<img src="/static/img/ice2.jpg" alt="name ice" class="imgGridItem">		
+		<img src="/static/img/treebark3.jpg" alt="name tree bark" class="imgGridItem">		
+		<img src="/static/img/treesnow.jpg" alt="name tree snow" class="imgGridItem">
+
+	</div>
+
+	<section id="modalView" class="modalView">
+
+		<div id="modalBackground" class="modalBackground">
+			<img id="modalImg" class="modalImg" src="" alt="">
+		</div>
+		<div class="closeModal">
+			<button id="closeButton" class="closeButton">&times;</button>
+		</div>
+	</section>
+
+
+	<script src="/static/js/javasheet.js"></script>
+
+{% endblock %}

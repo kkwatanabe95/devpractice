@@ -1,39 +1,29 @@
-// Configuring buttons to change the column numbers of the images grid
+/*
+Configuring buttons to change the column numbers of the images grid.
+*/
 
 let gridMode = localStorage.getItem('gridMode');
-
-var imgGridContainer = document.getElementById('imgGridContainer')
-
-const grid1Button = document.querySelector('#grid1');
-const grid2Button = document.querySelector('#grid2');
-const grid3Button = document.querySelector('#grid3');
-
-const enableGrid1 = () => {
-	imgGridContainer.style.gridTemplateColumns = 'repeat(1, 1fr)'
-	theme = localStorage.setItem('gridMode', 'grid1')
+const imgGridContainer = document.getElementById('imgGridContainer')
+const columnsButton = document.getElementsByClassName('gridColumnsButton')
+// List of available column numbers for the grid. *(edit this only to reflect new/deleted buttons)*
+const gridColumnOptions = [2, 3, 4, 5, 6, 10]
+// Changing the number of columns of the grid according to the clicked button.
+function enableGrid(columns) {
+	imgGridContainer.style.gridTemplateColumns = 'repeat('+columns+', 1fr)';
+	theme = localStorage.setItem('gridMode', columns);
 };
-
-const enableGrid2 = () => {
-	imgGridContainer.style.gridTemplateColumns = 'repeat(2, 1fr)'
-	theme = localStorage.setItem('gridMode', 'grid2')
+// Making a click event for each grid column button.
+for (let i = 0; i < gridColumnOptions.length; i++) {
+	document.getElementById('grid'+gridColumnOptions[i]).onclick = function () {enableGrid(gridColumnOptions[i])};
 };
-
-const enableGrid3 = () => {
-	imgGridContainer.style.gridTemplateColumns = 'repeat(3, 1fr)'
-	theme = localStorage.setItem('gridMode', 'grid3')
-};
-
-if (gridMode === 'grid1') {enableGrid1()};
-if (gridMode === 'grid2') {enableGrid2()};
-if (gridMode === 'grid3') {enableGrid3()};
-
-grid1Button.addEventListener("click", () => {enableGrid1()});
-grid2Button.addEventListener("click", () => {enableGrid2()});
-grid3Button.addEventListener("click", () => {enableGrid3()});
+// Calling the function to reflect the remembered number of columns from the last use.
+enableGrid(gridMode);
 
 
-// Making the button container sticky when viewing images
-
+/*
+Making the button container sticky when viewing images 
+(only for the Home page. This is not needed if photos are only on a separate url)
+*/
 window.onscroll = function() {stickToGrid()};
 
 var stickyButtonBox = document.getElementById('stickyButtonBox');
@@ -49,9 +39,13 @@ function stickToGrid() {
 	}
 }
 
-// Only showing images with certain img alt attributes
 
-const allImg = document.getElementsByTagName("img");
+/*
+Only showing images with the selected content option.
+Done by showing images with certain img alt attributes.
+*/
+
+var allImg = document.getElementsByClassName('imgGridItem');
 var searchItem;
 
 function showAll() {
@@ -74,6 +68,42 @@ document.querySelector('#searchAll').addEventListener("click", () => {showAll()}
 document.querySelector('#searchTree').addEventListener("click", () => {searchItem = "tree"; imgSearch()});
 document.querySelector('#searchSnow').addEventListener("click", () => {searchItem = "snow"; imgSearch()});
 document.querySelector('#searchSun').addEventListener("click", () => {searchItem = "sun"; imgSearch()});
+
+
+/*
+Clicked image will enlarge to fullscreen, with a short caption.
+Maybe also add arrows to move between pages.
+*/
+
+const modalView = document.getElementById('modalView');
+const closeView = document.getElementById('modalBackground');
+const closeButton = document.getElementById('closeButton');
+var modalImg = document.getElementById('modalImg');
+
+for (var i = 0; i < allImg.length; i++) {
+  	allImg[i].onclick = function(selectedImg) {
+	    modalImg.src = selectedImg.target.src;
+	    console.log('open');
+		modalView.style.display = 'block';
+ 	};
+};
+
+closeButton.onclick = function() {
+	console.log('close');
+	modalView.style.display = 'none';
+};
+
+closeView.onclick = function() {
+	console.log('close');
+	modalView.style.display = 'none';
+};
+
+
+
+
+
+
+
 
 
 // NEXT STEP IS TO REMEMBER THE TOGGLED STATUS AND REFLECT THAT TO THE STYLING OF THE BUTTON (diff colour for selected buttons, for example)

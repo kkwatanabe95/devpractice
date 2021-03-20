@@ -9,6 +9,9 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 def home():
 	return render_template("home.html")
 
+@app.route("/photography/")
+def photography():
+	return render_template("photography.html")
 
 
 if __name__ == "__main__":
