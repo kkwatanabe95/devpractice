@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Hover{% endblock %}
+
+
+{% block style %}
+.navbar a.hover:link, a.hover:visited {
+	background-color: grey;
+}
+body {
+	background-color: black;
+	color: white;
+}
+
+
+{% endblock %}
+
+{% block body %}
+	<h1 class="maintext">
+		Trying out cool effects with hover, cause, yea, that's fun.
+	</h1>
+
+	<div class="hoverGrid">
+		<div class="hoverGridItem hoverEffect1">Border<br>Color<br>Change</div>
+		<div class="hoverGridItem hoverEffect2">Fill<br>Color<br>Change</div>
+		<div class="hoverGridItem hoverEffect3">Text<br>Color<br>Change</div>
+		<div class="hoverGridItem hoverEffect4">Spinning<br>Shifting<br>Text</div>
+		<div class="hoverGridItem hoverEffect5">
+			<div class="hE hE5 hoverEffect5-Under">Hidden<br>Text</div>
+			<div class="hE hE5 hoverEffect5-Above">Reveal<br>Under</div>
+		</div>
+		<div class="hoverGridItem hoverEffect6">
+			<div class="hE hoverEffect6-Under">Reveal<br>Above</div>
+			<div class="hE hoverEffect6-Above">Hidden<br>Text</div>
+		</div>
+		<div class="hoverGridItem hoverEffect7">
+			<img class="hoverImage7" src="/static/img/billy.jpg">
+			<div class="hE hoverImage7Cover">Image<br>Reveal</div>
+		</div>
+		<div class="hoverGridItem hoverEffect8">Circle<br>In</div>
+		<div class="hoverGridItem hoverEffect9">Fade</div>
+
+	</div>
+
+
+{% endblock %}

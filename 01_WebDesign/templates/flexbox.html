@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}FlexBox{% endblock %}
+
+
+{% block style %}
+	.navbar a.flexbox:link, a.flexbox:visited {background-color: grey}
+	.navbar {margin-bottom: 0px}
+	body {color: white}
+
+{% endblock %}
+
+
+{% block body %}
+
+
+	<div class="image">
+		<div class="container">
+			<a href="/"><div class="item">left</div></a>
+			<a href="/"><div class="item">center</div></a>
+			<a href="/"><div class="item">right</div></a>
+		</div>
+		<h2 class="maintext">This is a flexbox menu!</h2>
+	</div>
+{% endblock %}
