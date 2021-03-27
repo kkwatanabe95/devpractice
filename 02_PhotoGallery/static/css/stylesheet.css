@@ -23,17 +23,18 @@ img {
 
 
 
-
-
-/* ### HOME PAGE ### */
-/* Navbar styling */
-
-
 .homeHeader {
 	width: 100%;
 	height: 100vh;
 	box-sizing: border-box;
 }
+
+
+
+/* ### HOME PAGE ### */
+/* Navbar styling 
+
+
 
 .navbarGridContainer {
 	display: grid;
@@ -65,9 +66,11 @@ img {
 	font-size: 1.8rem;
 	transition: 0.3s;
 }
+*/
 
 
-/* Explation of the different sections of the page, and links to them.*/
+
+/* Explanation of the different sections of the page, and links to them.
 
 .homeSection {
 	width: 100%;
@@ -95,11 +98,11 @@ img {
 	background: orange;
 	height: 500px;
 }
+*/
 
 
 
-
-/* PHOTOGRAPHY PAGE */
+/* PHOTO GALLERY */
 /* Grid for Images. The different display layout options are all done from Javascript */
 
 .imgGridContainer {
@@ -129,10 +132,24 @@ And also to make the toggle buttons sticky once reaching the photos */
 	align-content: center;
 	flex-direction: column;
 	position: absolute;
+<<<<<<< Updated upstream
 	top: 50px;
+=======
+	top: 70px;
+>>>>>>> Stashed changes
 	right: 50px;
 
 	background: orange;
+<<<<<<< Updated upstream
+=======
+	z-index: 2;
+} 
+
+.sticky {
+	position: fixed;
+	top: 70px;
+	right: 50px;
+>>>>>>> Stashed changes
 }
 
 .sticky {
@@ -142,6 +159,7 @@ And also to make the toggle buttons sticky once reaching the photos */
 	transition: 1s;
 
 }
+
 
 .logoText {
 	font: 3rem Impact;
