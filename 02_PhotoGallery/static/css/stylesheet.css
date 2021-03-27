@@ -166,11 +166,12 @@ And also to make the toggle buttons sticky once reaching the photos */
 	align-content: center;
 	flex-direction: column;
 	position: absolute;
-	top: 50px;
+	top: 70px;
 	right: 50px;
 	background: orange;
 	z-index: 2;
 } 
+
 
 
 .logoText {

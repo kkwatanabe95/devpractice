@@ -5,6 +5,7 @@ window.onclick = function (event) {
 }
 
 
+
 /*
 Configuring buttons to change the column numbers of the images grid.
 */
@@ -34,7 +35,7 @@ enableGrid(gridMode);
 /*
 Making the button container sticky when viewing images 
 (only for the Home page. This is not needed if photos are only on a separate url)
-*/ /*
+*/
 window.onscroll = function() {stickToGrid()};
 
 var stickyButtonBox = document.getElementById('stickyButtonBox');
@@ -49,9 +50,6 @@ function stickToGrid() {
 		stickyButtonBox.style.position = 'absolute';
 	}
 }
-
-/*
-
 
 
 
