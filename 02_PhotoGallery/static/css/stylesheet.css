@@ -36,17 +36,18 @@ html {
 	--accentThemeColor: ;
 }
 
-
-
-/* ### HOME PAGE ### */
-/* Navbar styling */
-
-
 .homeHeader {
 	width: 100%;
 	height: 100vh;
 	box-sizing: border-box;
 }
+
+
+
+/* ### HOME PAGE ### */
+/* Navbar styling 
+
+
 
 .navbarGridContainer {
 	display: grid;
@@ -78,6 +79,8 @@ html {
 	background: rgba(var(--mainThemeColor), 0.7);
 	transition: 0.3s;
 }
+*/
+
 
 /*
 NEED MEDIA QUERY FOR THE NAVBAR SO IT ADJUSTS LIKE THE IMAGES GRID
@@ -91,7 +94,7 @@ VERTICAL NAVBAR WHEN THE CONTENT CANNOT BE COVERED BY THE SCREEN WIDTH?
 
 
 
-/* Explation of the different sections of the page, and links to them.*/
+/* Explanation of the different sections of the page, and links to them.
 
 .homeSection {
 	width: 100%;
@@ -119,11 +122,11 @@ VERTICAL NAVBAR WHEN THE CONTENT CANNOT BE COVERED BY THE SCREEN WIDTH?
 	background: orange;
 	height: 500px;
 }
+*/
 
 
 
-
-/* PHOTOGRAPHY PAGE */
+/* PHOTO GALLERY */
 /* Grid for Images. The different display layout options are all done from Javascript */
 
 #imgGridContainer {
@@ -161,14 +164,13 @@ And also to make the toggle buttons sticky once reaching the photos */
 	display: flex;
 	justify-content: center;
 	align-content: center;
-
 	flex-direction: column;
-	position: fixed;
-	top: 70px;
+	position: absolute;
+	top: 50px;
 	right: 50px;
 	background: orange;
 	z-index: 2;
-}
+} 
 
 
 .logoText {

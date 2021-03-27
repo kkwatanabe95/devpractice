@@ -11,7 +11,7 @@ def home():
 
 @app.route("/photography/")
 def photography():
-	return render_template("photography.html")
+  return render_template("photography.html")
 
 @app.route("/fashion/")
 def fashion():
@@ -20,7 +20,6 @@ def fashion():
 @app.route("/interior/")
 def interior():
 	return render_template("interior.html")
-
 
 if __name__ == "__main__":
 	    app.run(debug=True)
