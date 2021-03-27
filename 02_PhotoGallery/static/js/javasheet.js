@@ -1,3 +1,13 @@
+<<<<<<< Updated upstream
+=======
+
+// Just for dev and debugging.
+window.onclick = function (event) {
+	console.log(event.target)
+}
+
+
+>>>>>>> Stashed changes
 /*
 Configuring buttons to change the column numbers of the images grid.
 */
@@ -33,11 +43,17 @@ var sticky = imgGridContainer.offsetTop;
 
 function stickToGrid() {
 	if (window.pageYOffset >= sticky) {
-		stickyButtonBox.classList.add('sticky');
+		stickyButtonBox.style.position = 'fixed';
 	} else {
-		stickyButtonBox.classList.remove('sticky');
+		stickyButtonBox.style.position = 'absolute';
 	}
 }
+<<<<<<< Updated upstream
+=======
+
+
+
+>>>>>>> Stashed changes
 
 
 /*
