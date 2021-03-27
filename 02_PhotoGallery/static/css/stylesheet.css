@@ -31,7 +31,7 @@ img {
 }
 
 html {
-	--backgroundColor: 255, 255, 255;
+	--backgroundColor: 0, 0, 0;
 	--mainThemeColor: 190, 100, 10;
 	--accentThemeColor: ;
 }
@@ -45,7 +45,7 @@ html {
 
 
 /* ### HOME PAGE ### */
-/* Navbar styling 
+/* Navbar styling */
 
 
 
@@ -79,7 +79,7 @@ html {
 	background: rgba(var(--mainThemeColor), 0.7);
 	transition: 0.3s;
 }
-*/
+
 
 
 /*
@@ -94,7 +94,7 @@ VERTICAL NAVBAR WHEN THE CONTENT CANNOT BE COVERED BY THE SCREEN WIDTH?
 
 
 
-/* Explanation of the different sections of the page, and links to them.
+/* Explanation of the different sections of the page, and links to them. */
 
 .homeSection {
 	width: 100%;
@@ -122,7 +122,7 @@ VERTICAL NAVBAR WHEN THE CONTENT CANNOT BE COVERED BY THE SCREEN WIDTH?
 	background: orange;
 	height: 500px;
 }
-*/
+
 
 
 
