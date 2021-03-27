@@ -5,7 +5,7 @@
 {% block style %}
 
 a#home {
-	background: rgba(25, 50, 25, 0.8);
+	background: rgba(var(--mainThemeColor));
 }
 
 {% endblock %}
@@ -13,7 +13,7 @@ a#home {
 {% block body %}
 
 	<div class="homeHeader">
-		<img src="/static/img/treesky.jpg" alt="">
+		<img src="/static/img/photography/treesky.jpg" alt="">
 		<section class="logoText">
 			<h1>FURUSATO DESIGN</h1>
 		</section>
@@ -73,5 +73,5 @@ a#home {
 
 
 
-	<script src="/static/js/javasheet.js"></script>
+
 {% endblock %}

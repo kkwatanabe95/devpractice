@@ -9,21 +9,17 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 def home():
 	return render_template("home.html")
 
-#@app.route("/photography/")
-#def photography():
-#	return render_template("photography.html")
+@app.route("/photography/")
+def photography():
+  return render_template("photography.html")
 
-<<<<<<< Updated upstream
-=======
-#@app.route("/fashion/")
-#def fashion():
-#	return render_template("fashion.html")
+@app.route("/fashion/")
+def fashion():
+	return render_template("fashion.html")
 
-#@app.route("/interior/")
-#def interior():
-#	return render_template("interior.html")
-
->>>>>>> Stashed changes
+@app.route("/interior/")
+def interior():
+	return render_template("interior.html")
 
 if __name__ == "__main__":
 	    app.run(debug=True)
