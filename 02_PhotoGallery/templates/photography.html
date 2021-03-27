@@ -8,7 +8,7 @@
 	position: relative;
 }
 a#photography {
-	background: rgba(25, 50, 25, 0.8);
+	background: rgba(var(--mainThemeColor));
 }
 
 {% endblock %}
@@ -16,8 +16,8 @@ a#photography {
 {% block body %}
 	
 
-	<div id="imgGridContainer" class="imgGridContainer gridLayout2">
-		<section id="stickyButtonBox" class="stickyButtonBox">	
+	<div id="imgGridContainer">
+		<section id="stickyButtonBox">	
 			<button id="grid2" class="gridColumnsButton">TWO</button>
 			<button id="grid3" class="gridColumnsButton">THREE</button>
 			<button id="grid4" class="gridColumnsButton">FOUR</button>
@@ -31,32 +31,40 @@ a#photography {
 			<button id="searchSnow" class="gridButton" style="background: green; color: white;">SNOW</button>
 			<button id="searchSun" class="gridButton" style="background: green; color: white;">SUN</button>
 		</section>
-		<img src="/static/img/snowhill2.jpg" alt="name snow hill sun" class="imgGridItem">		
-		<img src="/static/img/river.jpg" alt="name snow river sun" class="imgGridItem">		
-		<img src="/static/img/treesky2.jpg" alt="name tree sky" class="imgGridItem">		
-		<img src="/static/img/treebark1.jpg" alt="name tree bark" class="imgGridItem">		
-		<img src="/static/img/treesky3.jpg" alt="name ree sky" class="imgGridItem">		
-		<img src="/static/img/snowhill.jpg" alt="name snow hill" class="imgGridItem">		
-		<img src="/static/img/hillsun.jpg" alt="name hill sun" class="imgGridItem">		
-		<img src="/static/img/ice.jpg" alt="name ice sun" class="imgGridItem">		
-		<img src="/static/img/treebark2.jpg" alt="name tree bark" class="imgGridItem">		
-		<img src="/static/img/ice2.jpg" alt="name ice" class="imgGridItem">		
-		<img src="/static/img/treebark3.jpg" alt="name tree bark" class="imgGridItem">		
-		<img src="/static/img/treesnow.jpg" alt="name tree snow" class="imgGridItem">
+		<img src="/static/img/photography/snowhill2.jpg" alt="snow hill sun" class="imgGridItem landscape">		
+		<img src="/static/img/photography/river.jpg" alt="snow river sun" class="imgGridItem landscape">		
+		<img src="/static/img/photography/treesky2.jpg" alt="tree sky" class="imgGridItem landscape">		
+		<img src="/static/img/photography/treebark1.jpg" alt="snow sun sunset" class="imgGridItem landscape">		
+		<img src="/static/img/photography/treesky3.jpg" alt="tree sky" class="imgGridItem landscape">		
+		<img src="/static/img/photography/snowhill.jpg" alt="snow hill" class="imgGridItem landscape">		
+		<img src="/static/img/photography/hillsun.jpg" alt="hill sun" class="imgGridItem landscape">		
+		<img src="/static/img/photography/ice.jpg" alt="ice sun" class="imgGridItem landscape">		
+		<img src="/static/img/photography/treebark2.jpg" alt="tree bark" class="imgGridItem landscape">		
+		<img src="/static/img/photography/ice2.jpg" alt="ice" class="imgGridItem landscape">		
+		<img src="/static/img/photography/treebark3.jpg" alt="tree bark" class="imgGridItem landscape">		
+		<img src="/static/img/photography/treesnow.jpg" alt="tree snow" class="imgGridItem landscape">
 
 	</div>
 
 	<section id="modalView" class="modalView">
 
-		<div id="modalBackground" class="modalBackground">
-			<img id="modalImg" class="modalImg" src="" alt="">
+		<div id="modalBackground" class="center">
+			<div id="modalContent" class="center">
+				<div id="modalLeftArrowBox" class="modalArrowBox center">
+					<div id="modalLeftArrow"></div>
+				</div>
+				<img id="modalImg" class="modalImg" src="" alt="">
+				<div id="modalRightArrowBox" class="modalArrowBox center">
+					<div id="modalRightArrow"></div>
+				</div>
+			</div>
 		</div>
-		<div class="closeModal">
-			<button id="closeButton" class="closeButton">&times;</button>
+		<div id="closeModalButton" class="center">
+			<div id="closeButtonCross1" class="closeButtonCross"></div>
+			<div id="closeButtonCross2" class="closeButtonCross"></div>
 		</div>
 	</section>
 
 
-	<script src="/static/js/javasheet.js"></script>
 
 {% endblock %}

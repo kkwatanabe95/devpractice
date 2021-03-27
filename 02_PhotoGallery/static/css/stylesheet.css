@@ -1,6 +1,6 @@
 /* StyleSheet */
 html, body {
-	background: black;
+	background: rgba(var(--backgroundColor));
 	color: white;
 	margin: 0;
 	padding: 0;
@@ -13,15 +13,28 @@ footer {
 	align-items: center;
 	width: 100%;
 	height: 15vh;
-	background: rgba(50, 100, 50, 0.8);
+	background: rgba(var(--mainThemeColor));
 }
 img {
+	display: block;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
 
 
+.center {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+
+html {
+	--backgroundColor: 255, 255, 255;
+	--mainThemeColor: 190, 100, 10;
+	--accentThemeColor: ;
+}
 
 
 
@@ -37,12 +50,13 @@ img {
 
 .navbarGridContainer {
 	display: grid;
-	grid-template-columns: 150px 1fr 1fr 1fr 1fr 1fr 1fr 150px;
+	grid-template-columns: repeat(7, 1fr);
 
 	width: 100%;
 	position: absolute;
 	top: 0;
-	background: rgba(50, 100, 50, 0.7);
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 3;
 
 }
 
@@ -61,10 +75,20 @@ img {
 }
 
 .navbarGridContainer a:hover {
-	background: rgba(25, 50, 25, 0.5);
-	font-size: 1.8rem;
+	background: rgba(var(--mainThemeColor), 0.7);
 	transition: 0.3s;
 }
+
+/*
+NEED MEDIA QUERY FOR THE NAVBAR SO IT ADJUSTS LIKE THE IMAGES GRID
+VERTICAL NAVBAR WHEN THE CONTENT CANNOT BE COVERED BY THE SCREEN WIDTH?
+*/
+
+
+
+
+
+
 
 
 /* Explation of the different sections of the page, and links to them.*/
@@ -102,46 +126,50 @@ img {
 /* PHOTOGRAPHY PAGE */
 /* Grid for Images. The different display layout options are all done from Javascript */
 
-.imgGridContainer {
+#imgGridContainer {
 	display: grid;
 	box-sizing: border-box;
 	grid-gap: 2vw;
 	height: auto;
-	padding: 2vw;
-	background: rgb(20 20 20);
+	padding: 4vw;
+	background: rgba(var(--backgroundColor));
 	position: relative;
-	grid-template-columns: repeat(3, 1fr)
+	grid-template-columns: repeat(3, 1fr);
+	grid-auto-flow: dense;
 }
+
 
 .imgGridItem {
 	width: 100%;
-	height: auto;
-	box-sizing: border-box;
+	height: 100%;
+}
+
+.imgGridItem:hover {
+	opacity: 0.7;
+	transition: 0.3s;
+}
+
+#imgGridContainertest {
+
 }
 
 
 /* Buttons to toggle between the different display options.
 And also to make the toggle buttons sticky once reaching the photos */
 
-.stickyButtonBox {
+#stickyButtonBox {
 	display: flex;
 	justify-content: center;
 	align-content: center;
+
 	flex-direction: column;
-	position: absolute;
-	top: 50px;
-	right: 50px;
-
-	background: orange;
-}
-
-.sticky {
 	position: fixed;
-	top: 50px;
+	top: 70px;
 	right: 50px;
-	transition: 1s;
-
+	background: orange;
+	z-index: 2;
 }
+
 
 .logoText {
 	font: 3rem Impact;
@@ -158,32 +186,93 @@ And also to make the toggle buttons sticky once reaching the photos */
 .modalView {
 	display: none;
 	position: fixed;
-	z-index: 1;
+	z-index: 4;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100vh;
 }
 
-.modalBackground {
+#modalBackground {
 	width: 100%;
 	height: 100%;
-	background: rgba(50, 50, 50, 0.9);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+	background: black;
 }
 
-.modalImg {
+#modalContent {
 	width: auto;
+	max-width: 90%;
 	height: 90%;
 }
 
-.closeModal {
-	position: absolute;
-	top: 50px;
-	right: 50px;
+.modalImg {
+	width: 100%
+	height: 100%;
+}
+
+.modalArrowBox {
+	width: 10vh;
+	height: 100%;
+	background: rgba(50, 50, 50, 0.5);
+	opacity: 0;
+}
+
+.modalArrowBox:hover {
+	opacity: 1;
+	transition: 0.2s;
+}
+.modalArrowBox:active {
+	opacity: 0.2;
+}
+
+#modalLeftArrowBox {
+	border-radius: 10px 0 0 10px;
+}
+
+#modalLeftArrow {
+	width: 0;
+	height: 0;
+	border-top: 15px solid transparent;
+	border-right: 15px solid rgba(220, 220, 220, 0.7);
+	border-bottom: 15px solid transparent;
+}
+
+#modalRightArrowBox {
+	border-radius: 0 10px 10px 0;
+}
+
+#modalRightArrow {
+	width: 0;
+	height: 0;
+	border-top: 15px solid transparent;
+	border-left: 15px solid rgba(220, 220, 220, 0.7);
+	border-bottom: 15px solid transparent;
 }
 
 
+#closeModalButton {
+	position: absolute;
+	top: 50px;
+	right: 100px;
+	background: rgba(200, 200, 200, 0.5);
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+}
+.closeButtonCross {
+	width: 7px;
+	height: 45px;
+	background: rgba(200, 200, 200, 0.3);
+	border-radius: 50%;
+}
+#closeButtonCross1 {
+  	transform: rotate(45deg);
+}
+#closeButtonCross2 {
+  	transform: rotate(135deg);
+  	position: absolute;
+}
+#closeModalButton:hover {
+	background: rgba(200, 200, 200, 0.7);
+	transition: 0.2s;
+}

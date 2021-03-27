@@ -13,6 +13,14 @@ def home():
 def photography():
 	return render_template("photography.html")
 
+@app.route("/fashion/")
+def fashion():
+	return render_template("fashion.html")
+
+@app.route("/interior/")
+def interior():
+	return render_template("interior.html")
+
 
 if __name__ == "__main__":
 	    app.run(debug=True)
